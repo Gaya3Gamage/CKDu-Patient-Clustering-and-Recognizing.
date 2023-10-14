@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>CKDU Prediction</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+
+
+</head>
+
+<body>
+  <div class="login">
+    <img src="{{ url_for('static', filename='serum.png') }}" alt="Serum Image">
+    <h1>CKDU Prediction</h1>
+    <h2>Fill Your Serum Data</h2>
+
+    <!-- Main Input For Receiving CKDU Features -->
+    <form action="{{ url_for('predict') }}" method="post">
+      <p><label>V:
+        <input type="text" name="V "/> </label></p>
+      <p><label>Hg:
+        <input type="text" name="Hg" /></label> </p>
+      <p><label>Cs:
+        <input type="text" name="Cs" /> </label></p>
+      <p><label>As:
+        <input type="text" name="As" /> </label></p>
+      <p><label>Bi:
+        <input type="text" name="Bi" /> </label></p>
+      <p><label>Ba:
+        <input type="text" name="Ba" /> </label></p>
+      <p><label>Ca:
+        <input type="text" name="Ca" /> </label></p>
+      <p><label>Na:
+        <input type="text" name="Na" />  </label></p>
+      <p><label>Zn:
+        <input type="text" name="Zn" /> </label></p>
+
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+    <br>
+    <br>
+    {{ prediction_text }}
+
+  </div>
+</body>
+
+</html>

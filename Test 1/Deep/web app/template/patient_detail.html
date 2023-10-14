@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Patient Details</title>
+</head>
+<body>
+	<h1>CKDu Predictor</h1>
+	<p>Please fill this form with serum test details</p>
+ 
+	<form action= "http://127.0.0.1:5000/getresults" method="POST">
+
+		<p>Name<input type ="text" name="name"/></p>
+		<p>V<input type="text" name="V"/> </p>
+		<p>Hg<input type="text" name="Hg"/> </p>
+		<p>Cs<input type="text" name="Cs"/> </p>
+		<p>As<input type="text" name="As"/> </p>
+		<p>S.creatinine<input type="text" name="S.creatinine"/> </p>
+		<p>Bi<input type="text" name="Bi"/> </p>
+		<p>Ba<input type="text" name="Ba"/> </p>
+		<p>Ca<input type="text" name="Ca"/> </p>
+		<p>Na<input type="text" name="Na"/> </p>
+		<p>Zn<input type="text" name="Zn"/> </p>
+
+		<p><input type="submit" value="Submit Details"/></p>
+
+	</form>
+</body>
+</html>

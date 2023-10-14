@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>CKDU Prediction With Urine data</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+
+
+</head>
+
+<body>
+  <div class="login">
+    <img src="{{ url_for('static', filename='urine.png') }}" alt="urine Image">
+    <h1>CKDU Prediction</h1>
+    <h2>Fill Your Urine Data</h2>
+
+    <!-- Main Input For Receiving CKDU Features -->
+    <form action="{{ url_for('Upredict') }}" method="post">
+      <p><label>Rb:
+        <input type="text" name="Rb "/> </label></p>
+      <p><label>Bi:
+        <input type="text" name="Bi" /></label> </p>
+      <p><label>Hg:
+        <input type="text" name="Hg" /> </label></p>
+      <p><label>U:
+        <input type="text" name="U" /> </label></p>
+      <p><label>Al:
+        <input type="text" name="Al" /> </label></p>
+      <p><label>Ag:
+        <input type="text" name="Ag" /> </label></p>
+      <p><label>Ga:
+        <input type="text" name="Ga" /> </label></p>
+      <p><label>Li:
+        <input type="text" name="Li" />  </label></p>
+      <p><label>Pb:
+        <input type="text" name="Pb" /> </label></p>
+       <p><label>Age:
+        <input type="text" name="Age" /> </label></p>
+
+      <button type="submit" class="btn btn-primary btn-block btn-large">UPredict</button>
+    </form>
+
+    <br>
+    <br>
+    {{ prediction_text }}
+
+  </div>
+</body>
+
+</html>
